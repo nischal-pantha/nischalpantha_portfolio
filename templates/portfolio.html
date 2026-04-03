@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischal Pantha - Pilot, Founder of Namestech, Creator of SkyBound</title>
+    <meta name="description" content="Nischal Pantha - Commercial Pilot with 1000+ flight hours, Founder & Director at Namestech, and Creator of SkyBound aviation platform for pilot training and flight operations.">
+    <meta name="keywords" content="Nischal Pantha, Namestech, SkyBound, Commercial Pilot, Flight Training, Aviation Platform, Founder, Technology, Portfolio">
+    <meta name="author" content="Nischal Pantha">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/apple-style.css') }}">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-sphere"></div>
+            <h2>Loading</h2>
+        </div>
+    </div>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-gradient-animated"></div>
+    <div class="bg-blur-orb orb-1"></div>
+    <div class="bg-blur-orb orb-2"></div>
+    <div class="bg-blur-orb orb-3"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div class="cursor-point"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-text">Nischal</span>
+                <span class="nav-logo-badge">Namestech</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+                <li><a href="#professional-stack" class="nav-link">Pro Stack</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-progress"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>Welcome to my portfolio</span>
+                    </div>
+                    <div class="dual-badges">
+                        <span class="tech-badge"><i class="fas fa-rocket"></i> Founder</span>
+                        <span class="pilot-badge"><i class="fas fa-plane"></i> Commercial Pilot</span>
+                        <span class="app-badge"><i class="fas fa-mobile-alt"></i> App Creator</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="text-line">Nischal Pantha</span>
+                    </h1>
+                    <p class="hero-subtitle">Founder & Director at Namestech | Commercial Pilot | Creator of SkyBound</p>
+                    <p class="hero-role">Innovating at the Intersection of Aviation & Technology</p>
+                    <p class="hero-description">
+                        A commercial pilot and tech entrepreneur who founded Namestech and created SkyBound—revolutionizing aviation training and operations. Three interconnected passions: flying with precision, building transformative technology, and empowering the aviation community through innovation.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="namestech-badge">
+                            <i class="fas fa-code"></i>
+                            <span>Namestech</span>
+                        </div>
+                        <div class="pilot-badge-overlay">
+                            <i class="fas fa-plane"></i>
+                            <span>Commercial Pilot</span>
+                        </div>
+                        <div class="skybound-badge">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>SkyBound</span>
+                        </div>
+                        <img src="{{ url_for('static', filename='images/Nischal.png') }}" alt="Nischal Pantha" class="profile-image">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <div class="scroll-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Tech Innovator & Commercial Pilot</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm Nischal Pantha, a Commercial Pilot, Founder of <strong>Namestech</strong>, and Creator of <strong>SkyBound</strong>—a comprehensive aviation platform that revolutionizes pilot training and flight operations.
+                    </p>
+                    <p>
+                        My unique journey combines three interconnected passions: flying with precision, building innovative technology, and creating tools that empower the aviation community. Whether commanding an aircraft at 35,000 feet or architecting enterprise-scale systems from the ground, my philosophy remains constant: excellence through discipline, innovation through exploration, and always prioritizing safety and impact.
+                    </p>
+                    
+                    <h3 class="about-section-title">As a Technology Visionary</h3>
+                    <p>
+                        I founded Namestech to bridge the gap between ambitious business goals and cutting-edge technology solutions. My mission is to empower organizations with transformative technology that drives measurable impact. Namestech specializes in digital transformation, cloud solutions, and enterprise-grade software architecture.
+                    </p>
+
+                    <h3 class="about-section-title">As Creator of SkyBound</h3>
+                    <p>
+                        SkyBound represents the perfect intersection of my aviation passion and software expertise. Recognizing a critical gap in pilot training and flight operations technology, I created SkyBound—a comprehensive platform that leverages real-time flight data, weather integration, and advanced flight planning tools. SkyBound serves student pilots, flight schools, and professional aviators, improving training outcomes and operational efficiency through data-driven insights and intuitive design.
+                    </p>
+                    
+                    <h3 class="about-section-title">As a Commercial Pilot</h3>
+                    <p>
+                        Aviation represents my deepest passion—the perfect blend of technical precision, situational awareness, and continuous learning. As a commercial pilot with 1000+ flight hours, I've developed unparalleled problem-solving skills under pressure and a commitment to safety that mirrors my approach to software development. My real-world aviation experience directly informs SkyBound's design and feature development.
+                    </p>
+
+                    <div class="namestech-info glass-morphism">
+                        <h3><i class="fas fa-building"></i> Namestech & SkyBound</h3>
+                        <ul class="namestech-services">
+                            <li><i class="fas fa-check-circle"></i> Custom Software Development</li>
+                            <li><i class="fas fa-check-circle"></i> Web & Mobile Application Development</li>
+                            <li><i class="fas fa-check-circle"></i> Aviation Platform Solutions (SkyBound)</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud Solutions & Infrastructure</li>
+                            <li><i class="fas fa-check-circle"></i> Digital Transformation Services</li>
+                            <li><i class="fas fa-check-circle"></i> IT Consulting & Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glass-morphism">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Tech Founder</h3>
+                        <p>Director of Namestech, pioneering digital transformation and innovative IT solutions for enterprises globally</p>
+                    </div>
+                    <div class="about-card glass-morphism">
+                        <div class="card-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Aviation Pioneer</h3>
+                        <p>Commercial Pilot with 1000+ flight hours and creator of SkyBound—revolutionizing pilot training and flight operations</p>
+                    </div>
+                    <div class="about-card glass-morphism">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Full-Stack Engineer</h3>
+                        <p>Expert in cloud architecture, modern frameworks, and scalable systems that serve millions of users</p>
+                    </div>
+                    <div class="about-card glass-morphism">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Strategic Innovator</h3>
+                        <p>Bridging aviation discipline with tech innovation through SkyBound—precision in execution and impact-driven design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="tech-stack" id="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technology Stack</h2>
+                <p class="section-subtitle">Powering Namestech solutions & SkyBound aviation platform</p>
+            </div>
+            <div class="stack-grid">
+                <!-- Frontend -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Vue.js</span>
+                        <span class="stack-tag">TypeScript</span>
+                        <span class="stack-tag">Tailwind CSS</span>
+                        <span class="stack-tag">Next.js</span>
+                        <span class="stack-tag">GSAP</span>
+                        <span class="stack-tag">Redux</span>
+                        <span class="stack-tag">Webpack</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">Python</span>
+                        <span class="stack-tag">Express.js</span>
+                        <span class="stack-tag">Flask</span>
+                        <span class="stack-tag">Django</span>
+                        <span class="stack-tag">GraphQL</span>
+                        <span class="stack-tag">REST APIs</span>
+                        <span class="stack-tag">Microservices</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">PostgreSQL</span>
+                        <span class="stack-tag">MongoDB</span>
+                        <span class="stack-tag">Redis</span>
+                        <span class="stack-tag">Elasticsearch</span>
+                        <span class="stack-tag">DynamoDB</span>
+                        <span class="stack-tag">Firebase</span>
+                        <span class="stack-tag">MySQL</span>
+                        <span class="stack-tag">Oracle</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">AWS</span>
+                        <span class="stack-tag">Google Cloud</span>
+                        <span class="stack-tag">Docker</span>
+                        <span class="stack-tag">Kubernetes</span>
+                        <span class="stack-tag">CI/CD</span>
+                        <span class="stack-tag">GitHub Actions</span>
+                        <span class="stack-tag">Terraform</span>
+                        <span class="stack-tag">Jenkins</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">React Native</span>
+                        <span class="stack-tag">Flutter</span>
+                        <span class="stack-tag">Swift</span>
+                        <span class="stack-tag">Kotlin</span>
+                        <span class="stack-tag">Xcode</span>
+                        <span class="stack-tag">Android Studio</span>
+                        <span class="stack-tag">Firebase Mobile</span>
+                        <span class="stack-tag">App Store</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">TensorFlow</span>
+                        <span class="stack-tag">PyTorch</span>
+                        <span class="stack-tag">Scikit-learn</span>
+                        <span class="stack-tag">NLP</span>
+                        <span class="stack-tag">Computer Vision</span>
+                        <span class="stack-tag">Jupyter</span>
+                        <span class="stack-tag">Pandas</span>
+                        <span class="stack-tag">NumPy</span>
+                    </div>
+                </div>
+
+                <!-- Aviation Tech Stack -->
+                <div class="stack-category glass-morphism">
+                    <div class="stack-header">
+                        <i class="fas fa-plane"></i>
+                        <h3>Aviation Tech (SkyBound)</h3>
+                    </div>
+                    <div class="stack-items">
+                        <span class="stack-tag">GPS/Maps API</span>
+                        <span class="stack-tag">Flight Data API</span>
+                        <span class="stack-tag">Real-time Tracking</span>
+                        <span class="stack-tag">Weather API</span>
+                        <span class="stack-tag">Geospatial Data</span>
+                        <span class="stack-tag">Performance Analytics</span>
+                        <span class="stack-tag">Flight Planning</span>
+                        <span class="stack-tag">Mobile-First</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Stack Section -->
+    <section class="professional-stack" id="professional-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Stack</h2>
+                <p class="section-subtitle">Business practices, methodologies, and expertise</p>
+            </div>
+            <div class="professional-grid">
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <p class="prof-description">Agile, Scrum, Kanban, Sprint Planning, Backlog Management</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Agile</span>
+                        <span class="prof-tag">Scrum</span>
+                        <span class="prof-tag">Leadership</span>
+                        <span class="prof-tag">Planning</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Strategy</h3>
+                    <p class="prof-description">Business Analysis, Growth Strategy, Digital Transformation</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Strategy</span>
+                        <span class="prof-tag">Analysis</span>
+                        <span class="prof-tag">Transformation</span>
+                        <span class="prof-tag">Growth</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <h3>Team Leadership</h3>
+                    <p class="prof-description">Team Building, Mentoring, Communication, Delegation</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Mentoring</span>
+                        <span class="prof-tag">Building</span>
+                        <span class="prof-tag">Communication</span>
+                        <span class="prof-tag">Coaching</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security & Compliance</h3>
+                    <p class="prof-description">GDPR, HIPAA, Data Privacy, Cybersecurity, Auditing</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">GDPR</span>
+                        <span class="prof-tag">HIPAA</span>
+                        <span class="prof-tag">Security</span>
+                        <span class="prof-tag">Compliance</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Client Relations</h3>
+                    <p class="prof-description">Negotiation, Presentations, Relationship Management, Support</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Negotiation</span>
+                        <span class="prof-tag">Relations</span>
+                        <span class="prof-tag">Support</span>
+                        <span class="prof-tag">Presentations</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Aviation Expertise</h3>
+                    <p class="prof-description">Commercial License, Navigation, Systems, Safety Protocols, Flight Planning</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Pilot</span>
+                        <span class="prof-tag">1000+ Hours</span>
+                        <span class="prof-tag">Safety</span>
+                        <span class="prof-tag">FAA Certified</span>
+                    </div>
+                </div>
+
+                <div class="professional-card glass-morphism">
+                    <div class="prof-icon">
+                        <i class="fas fa-send"></i>
+                    </div>
+                    <h3>SkyBound App Development</h3>
+                    <p class="prof-description">Aviation-focused platform for student pilots, flight schools, and professional pilots</p>
+                    <div class="prof-items">
+                        <span class="prof-tag">Flight Planning</span>
+                        <span class="prof-tag">Operations</span>
+                        <span class="prof-tag">Training</span>
+                        <span class="prof-tag">Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aviation & Tech Connection Section -->
+    <section class="aviation-tech" id="aviation-tech">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Aviation Meets Technology</h2>
+                <p class="section-subtitle">Two Passions, One Philosophy</p>
+            </div>
+            <div class="connection-grid">
+                <div class="connection-card glass-morphism">
+                    <div class="connection-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Precision & Discipline</h3>
+                    <p>
+                        In aviation, precision is life-or-death. The same mentality drives my code—every function must be bulletproof, every system must be redundant, and safety (data security) is paramount. No room for mistakes, only excellence.
+                    </p>
+                    <div class="connection-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Precision Focus</span>
+                    </div>
+                </div>
+
+                <div class="connection-card glass-morphism">
+                    <div class="connection-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Decision Making Under Pressure</h3>
+                    <p>
+                        Pilots must make critical decisions in real-time with incomplete information. This trait directly translates to software architecture—rapid assessment, calculated risk-taking, and decisive execution define my approach to complex systems.
+                    </p>
+                    <div class="connection-stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Flight Hours</span>
+                    </div>
+                </div>
+
+                <div class="connection-card glass-morphism">
+                    <div class="connection-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safety First Mentality</h3>
+                    <p>
+                        Aviation has taught me that safety is not an afterthought—it's foundational. In software, this means secure architecture, data protection, and systems designed to gracefully handle failures.
+                    </p>
+                    <div class="connection-stat">
+                        <span class="stat-number">99.99%</span>
+                        <span class="stat-label">Uptime Standard</span>
+                    </div>
+                </div>
+
+                <div class="connection-card glass-morphism">
+                    <div class="connection-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Continuous Learning</h3>
+                    <p>
+                        Both fields demand perpetual education—new technologies, aviation regulations, emerging frameworks. I embrace this ethos of lifelong learning and skill development.
+                    </p>
+                    <div class="connection-stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technical proficiency and professional capabilities</p>
+            </div>
+            <!-- Professional Skills Highlights -->
+            <div class="skills-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-number">1000+</div>
+                    <div class="highlight-label">Flight Hours</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">50+</div>
+                    <div class="highlight-label">Successful Projects</div>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-number">500+</div>
+                    <div class="highlight-label">Flight Schools Using SkyBound</div>
+                </div>
+            </div>
+            
+            <div class="skills-wrapper">
+                <!-- Tech Skills Column -->
+                <div class="skills-column">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-code"></i> Technology Stack
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Frontend Development</h4>
+                                <span class="skill-level" data-progress="95">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                            <div class="skill-tech">React • Vue • TypeScript • Tailwind CSS • GSAP • Webpack</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Backend Development</h4>
+                                <span class="skill-level" data-progress="90">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-tech">Node.js • Python • PostgreSQL • MongoDB • REST APIs • GraphQL</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Cloud & DevOps</h4>
+                                <span class="skill-level" data-progress="88">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                            <div class="skill-tech">AWS • Google Cloud • Docker • Kubernetes • CI/CD • Terraform</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Mobile Development</h4>
+                                <span class="skill-level" data-progress="85">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <div class="skill-tech">React Native • Flutter • Swift • Kotlin • Firebase</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Database Design</h4>
+                                <span class="skill-level" data-progress="92">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                            <div class="skill-tech">SQL • NoSQL • Redis • Elasticsearch • Data Optimization</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>AI & Machine Learning</h4>
+                                <span class="skill-level" data-progress="80">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <div class="skill-tech">TensorFlow • PyTorch • Scikit-learn • NLP • Computer Vision</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Skills Column -->
+                <div class="skills-column">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-star"></i> Professional Skills
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Project Management</h4>
+                                <span class="skill-level" data-progress="90">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-tech">Agile • Scrum • Kanban • Leadership • Strategic Planning</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Digital Strategy</h4>
+                                <span class="skill-level" data-progress="88">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                            <div class="skill-tech">Business Analysis • Growth Strategy • Digital Transformation</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Team Leadership</h4>
+                                <span class="skill-level" data-progress="92">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                            <div class="skill-tech">Team Building • Mentoring • Communication • Delegation</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Security & Compliance</h4>
+                                <span class="skill-level" data-progress="87">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                            <div class="skill-tech">GDPR • HIPAA • Data Privacy • Cybersecurity • Auditing</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Client Relations</h4>
+                                <span class="skill-level" data-progress="93">93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="93"></div>
+                            </div>
+                            <div class="skill-tech">Negotiation • Presentations • Relationship Management</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>Aviation Expertise</h4>
+                                <span class="skill-level" data-progress="94">94%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="94"></div>
+                            </div>
+                            <div class="skill-tech">Commercial Pilot • Flight Planning • 1000+ Hours • Mentoring</div>
+                        </div>
+
+                        <div class="skill-card glass-morphism">
+                            <div class="skill-header">
+                                <h4>SkyBound Development</h4>
+                                <span class="skill-level" data-progress="96">96%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="96"></div>
+                            </div>
+                            <div class="skill-tech">Flight Data APIs • Weather Integration • Operations • Performance Analytics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">Combined expertise in technology and aviation</p>
+            </div>
+            <div class="experience-wrapper">
+                <!-- Tech Career -->
+                <div class="experience-column">
+                    <h3 class="experience-category">
+                        <i class="fas fa-briefcase"></i> Technology Career
+                    </h3>
+                    <div class="experience-timeline">
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Creator of SkyBound App</h3>
+                                    <span class="timeline-period">2021 - Present</span>
+                                </div>
+                                <p class="timeline-company">SkyBound Aviation Platform</p>
+                                <p class="timeline-description">
+                                    Created SkyBound, an innovative aviation app serving student pilots, flight schools, and professional pilots. Provides comprehensive flight planning, operations management, performance analytics, and training tools integrated with real-time weather and flight data APIs.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Aviation Tech</span>
+                                    <span class="tag">Flight Planning</span>
+                                    <span class="tag">Mobile App</span>
+                                    <span class="tag">Real-time Data</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Founder & Director</h3>
+                                    <span class="timeline-period">2020 - Present</span>
+                                </div>
+                                <p class="timeline-company">Namestech IT Solutions</p>
+                                <p class="timeline-description">
+                                    Founded and lead Namestech, an innovative IT company specializing in digital transformation, custom software development, and cloud solutions. Successfully scaled the company to work with Fortune 500 clients globally. Launched SkyBound as part of Namestech's aviation tech division.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Entrepreneurship</span>
+                                    <span class="tag">Digital Transformation</span>
+                                    <span class="tag">Cloud Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Senior Full-Stack Developer</h3>
+                                    <span class="timeline-period">2017 - 2020</span>
+                                </div>
+                                <p class="timeline-company">Leading Tech Companies</p>
+                                <p class="timeline-description">
+                                    Architected and led development of large-scale applications serving millions of users. Mentored junior developers and established best practices for code quality and performance optimization.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Full-Stack Development</span>
+                                    <span class="tag">Architecture</span>
+                                    <span class="tag">Mentoring</span>
+                                    <span class="tag">Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Full-Stack Developer</h3>
+                                    <span class="timeline-period">2015 - 2017</span>
+                                </div>
+                                <p class="timeline-company">Technology Startups</p>
+                                <p class="timeline-description">
+                                    Built robust applications from concept to production. Gained expertise in modern web frameworks, cloud deployment, and agile development methodologies.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Web Development</span>
+                                    <span class="tag">Cloud Deployment</span>
+                                    <span class="tag">Agile</span>
+                                    <span class="tag">Startups</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aviation Career -->
+                <div class="experience-column">
+                    <h3 class="experience-category">
+                        <i class="fas fa-plane"></i> Aviation Career
+                    </h3>
+                    <div class="experience-timeline">
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Professional Pilot & Flight Training</h3>
+                                    <span class="timeline-period">2020 - Present</span>
+                                </div>
+                                <p class="timeline-company">Active Commercial Pilot</p>
+                                <p class="timeline-description">
+                                    Continuously advancing flight skills with complex aircraft operations, advanced navigation techniques, and mentoring aspiring pilots. Maintaining 1000+ flight hours with expertise across multiple aircraft types and flight conditions. Combining professional flying experience with SkyBound app development to improve pilot training and operations.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Professional Flying</span>
+                                    <span class="tag">1000+ Hours</span>
+                                    <span class="tag">Mentoring</span>
+                                    <span class="tag">Advanced Training</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Commercial Pilot License</h3>
+                                    <span class="timeline-period">2018 - Present</span>
+                                </div>
+                                <p class="timeline-company">Licensed Commercial Pilot</p>
+                                <p class="timeline-description">
+                                    Holds Commercial Pilot License with multi-engine and instrument ratings. Combines passion for aviation with professional expertise, maintaining proficiency through regular training and advancement in advanced aircraft operations and complex flight scenarios.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Commercial License</span>
+                                    <span class="tag">Multi-Engine</span>
+                                    <span class="tag">Instrument Rated</span>
+                                    <span class="tag">Safety First</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Advanced Training & Certifications</h3>
+                                    <span class="timeline-period">2016 - 2018</span>
+                                </div>
+                                <p class="timeline-company">Part 141 Flight School</p>
+                                <p class="timeline-description">
+                                    Completed comprehensive commercial pilot training program including advanced maneuvers, emergency procedures, and high-altitude flight operations. Achieved ratings in both single and multi-engine aircraft.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Training</span>
+                                    <span class="tag">Certifications</span>
+                                    <span class="tag">Advanced Maneuvers</span>
+                                    <span class="tag">Safety Protocols</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item glass-morphism">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Private Pilot & Solo Flying</h3>
+                                    <span class="timeline-period">2014 - 2016</span>
+                                </div>
+                                <p class="timeline-company">Flight Training</p>
+                                <p class="timeline-description">
+                                    Earned Private Pilot License and achieved first solo flight. Developed fundamental flying skills, navigation techniques, and safety procedures that became the foundation for advanced aviation training.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Private License</span>
+                                    <span class="tag">Solo Flying</span>
+                                    <span class="tag">Navigation</span>
+                                    <span class="tag">Fundamentals</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Signature innovations and Namestech solutions</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-plane"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-badge featured-badge">
+                        <i class="fas fa-crown"></i> Signature Project
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">500+</div>
+                            <div class="metric-label">Flight Schools</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">Real-time</div>
+                            <div class="metric-label">Flight Data</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">99.8%</div>
+                            <div class="metric-label">Uptime</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SkyBound</h3>
+                        <p class="project-subtitle">Aviation Platform for Pilots & Flight Schools</p>
+                        <p class="project-description">Revolutionizing pilot training and flight operations with comprehensive flight planning, real-time weather integration, performance analytics, and operations management. Trusted by 500+ flight schools and 10,000+ pilots worldwide for enhanced training outcomes and operational efficiency.</p>
+                        <div class="project-tech">
+                            <span>Flight Planning</span>
+                            <span>Weather API</span>
+                            <span>Real-time Tracking</span>
+                            <span>Performance Analytics</span>
+                            <span>Mobile-First</span>
+                            <span>Geospatial Data</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>Explore SkyBound</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-badge mobile-badge">
+                        <i class="fas fa-mobile-alt"></i> Mobile
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">50K+</div>
+                            <div class="metric-label">Downloads</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">4.8★</div>
+                            <div class="metric-label">Rating</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3mo</div>
+                            <div class="metric-label">Dev Time</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mobile App Suite</h3>
+                        <p class="project-subtitle">Cross-Platform Apps</p>
+                        <p class="project-description">Developed a suite of mobile applications for iOS and Android with offline capabilities, push notifications, and seamless synchronization across devices.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>Redux</span>
+                            <span>REST API</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-server"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-badge devops-badge">
+                        <i class="fas fa-server"></i> DevOps
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">40%</div>
+                            <div class="metric-label">Cost Reduction</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">10x</div>
+                            <div class="metric-label">Deploy Speed</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">99.95%</div>
+                            <div class="metric-label">Availability</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cloud Infrastructure</h3>
+                        <p class="project-subtitle">DevOps & Scalability</p>
+                        <p class="project-description">Designed and implemented a scalable cloud infrastructure using containerization and orchestration, reducing infrastructure costs by 40% while improving performance.</p>
+                        <div class="project-tech">
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>AWS ECS</span>
+                            <span>CI/CD</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-badge analytics-badge">
+                        <i class="fas fa-chart-line"></i> Analytics
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">100M+</div>
+                            <div class="metric-label">Data Points</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">50ms</div>
+                            <div class="metric-label">Avg Latency</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">5K+</div>
+                            <div class="metric-label">Daily Users</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Analytics Dashboard</h3>
+                        <p class="project-subtitle">Data Visualization</p>
+                        <p class="project-description">Created an advanced analytics dashboard processing millions of data points in real-time with interactive visualizations and custom reporting capabilities.</p>
+                        <div class="project-tech">
+                            <span>D3.js</span>
+                            <span>Python</span>
+                            <span>MongoDB</span>
+                            <span>WebSockets</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-lock"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-badge security-badge">
+                        <i class="fas fa-shield-alt"></i> Security
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">GDPR</div>
+                            <div class="metric-label">Compliant</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">256-bit</div>
+                            <div class="metric-label">Encryption</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">24/7</div>
+                            <div class="metric-label">Monitoring</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Security Platform</h3>
+                        <p class="project-subtitle">Enterprise Security</p>
+                        <p class="project-description">Built an enterprise security platform with encryption, threat detection, and compliance monitoring for regulated industries.</p>
+                        <div class="project-tech">
+                            <span>Enterprise Security</span>
+                            <span>Encryption</span>
+                            <span>Compliance</span>
+                            <span>Monitoring</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-morphism">
+                    <div class="project-image">
+                        <div class="project-icon"><i class="fas fa-brain"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <div class="metric-value">94%</div>
+                            <div class="metric-label">Accuracy</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">10x</div>
+                            <div class="metric-label">Efficiency</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">Real-time</div>
+                            <div class="metric-label">Processing</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Integration</h3>
+                        <p class="project-subtitle">Machine Learning Solutions</p>
+                        <p class="project-description">Integrated machine learning models into production systems for predictive analytics, recommendation engines, and intelligent automation.</p>
+                        <div class="project-tech">
+                            <span>Machine Learning</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>API Integration</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What clients say about Namestech</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-morphism">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Namestech transformed our business with their innovative IT solutions. Nischal's leadership and vision have been instrumental in our digital transformation."</p>
+                    <p class="testimonial-author">— CEO, Fortune 500 Company</p>
+                </div>
+                <div class="testimonial-card glass-morphism">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Working with Nischal and Namestech was a game-changer. Their technical expertise and commitment to excellence resulted in a product that exceeded our expectations."</p>
+                    <p class="testimonial-author">— Product Manager, Tech Startup</p>
+                </div>
+                <div class="testimonial-card glass-morphism">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Exceptional service and outstanding results. Namestech delivered a cloud infrastructure that scaled perfectly with our growth. Highly recommended!"</p>
+                    <p class="testimonial-author">— CTO, SaaS Company</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your next project</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-content glass-morphism">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" class="contact-form" action="/contact" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project inquiry">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project, requirements, or inquiry..."></textarea>
+                        </div>
+                        <div id="form-feedback" class="form-feedback"></div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info glass-morphism">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:nischal88135@gmail.com">nischal88135@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Global Operations</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/nischal-pantha" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/nischalpantha" target="_blank" rel="noopener noreferrer" title="Twitter" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/nischalpantha" target="_blank" rel="noopener noreferrer" title="GitHub" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/nischalpantha" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@nischalpantha" target="_blank" rel="noopener noreferrer" title="YouTube" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="mailto:contact@namestech.com" title="Email" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Namestech. All rights reserved. | Founded by Nischal Pantha</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="{{ url_for('static', filename='js/apple-animations.js') }}"></script>
+</body>
+</html>

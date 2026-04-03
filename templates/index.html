@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nischal Pantha - Founder & Director at Namestech</title>
+    <meta name="description" content="Portfolio of Nischal Pantha, a professional pilot and founder of NamesTech, creators of Skybound - the ultimate app for pilot training and operations.">
+    <meta name="keywords" content="pilot, aviation, NamesTech, Skybound, pilot training, flight operations, Nischal">
+    <meta name="author" content="Nischal">
+    <meta property="og:title" content="Nischal Pantha's Portfolio - Pilot & NamesTech Founder">
+    <meta property="og:description" content="Discover Nischal Pantha's journey as a pilot and founder of NamesTech, featuring the Skybound app for pilots.">
+    <meta property="og:image" content="{{ url_for('static', filename='images/Nischal.png', _external=True) }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nischal Pantha",
+        "jobTitle": "Pilot and Founder",
+        "description": "Professional pilot and founder of NamesTech, creators of Skybound app for pilot training and operations.",
+        "image": "{{ url_for('static', filename='images/Nischal.png', _external=True) }}",
+        "sameAs": [
+            "https://www.linkedin.com/in/nischal-pantha",
+            "https://twitter.com/nischalpantha"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "NamesTech"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-new.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading experience</p>
+        </div>
+    </div>
+    <div id="cursor-follower"></div>
+    <div id="gradient-blur"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div id="scroll-progress"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-brand">
+                <img src="{{ url_for('static', filename='images/Nischal.png') }}" alt="Nischal" class="logo-img-small">
+                <span class="brand-name">Nischal</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='images/Nischal.png') }}" alt="Nischal Pantha" class="profile-hero">
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title">Nischal Pantha</h1>
+                <p class="hero-subtitle" id="typewriter-text"></p>
+                <p class="hero-description">Professional Pilot & Founder of NamesTech. Building innovative solutions for aviation at scale.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a professional pilot with over 10 years of experience in aviation, combined with a passion for technology and innovation. As the founder of NamesTech, I'm dedicated to revolutionizing pilot training and daily operations through cutting-edge software solutions. My unique blend of practical flight experience and technical expertise drives innovation in the aviation industry.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill" data-tooltip="Expert in piloting various aircraft with over 10 years of experience">
+                <h3>Piloting</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="95%"></div>
+                </div>
+                <div class="skill-percentage">95%</div>
+            </div>
+            <div class="skill" data-tooltip="Developing innovative mobile and web applications for aviation industry">
+                <h3>App Development</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="85%"></div>
+                </div>
+                <div class="skill-percentage">85%</div>
+            </div>
+            <div class="skill" data-tooltip="Integrating cutting-edge technology solutions in aviation operations">
+                <h3>Aviation Technology</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="90%"></div>
+                </div>
+                <div class="skill-percentage">90%</div>
+            </div>
+            <div class="skill" data-tooltip="Leading teams and driving innovation at NamesTech">
+                <h3>Leadership</h3>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-width="88%"></div>
+                </div>
+                <div class="skill-percentage">88%</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Commercial Pilot</h3>
+                <p>Over 10 years of experience flying various aircraft, ensuring safety and efficiency in operations.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Founder, NamesTech</h3>
+                <p>Established NamesTech to develop innovative solutions for the aviation industry, including the Skybound app.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Flight Instructor</h3>
+                <p>Trained numerous student pilots, sharing knowledge and passion for aviation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Nischal's expertise in piloting and technology has transformed our training programs."</p>
+            <cite>- Aviation Academy</cite>
+        </div>
+        <div class="testimonial">
+            <p>"Skybound has made flight planning so much easier and safer."</p>
+            <cite>- Professional Pilot</cite>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Our App</h2>
+        <div>
+            <img src="{{ url_for('static', filename='images/nextjs-a91cb440.png') }}" alt="Skybound App Screenshot">
+            <h3>Skybound - Pilot Training & Operations App</h3>
+            <p>Skybound is a comprehensive app developed by NamesTech to assist pilots with training, flight planning, progress tracking, and daily operational needs. Designed for both student pilots and seasoned aviators.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Key Features of Skybound</h2>
+        <ul>
+            <li>Interactive flight lessons and simulations</li>
+            <li>Real-time flight planning and weather integration</li>
+            <li>Progress tracking for training milestones</li>
+            <li>Community forums for pilot discussions</li>
+            <li>Maintenance logs and aircraft management</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Ready to elevate your piloting experience? Reach out to learn more about NamesTech and Skybound.</p>
+        <form id="contact-form" action="/contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <div id="form-feedback" class="form-feedback"></div>
+            <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NamesTech. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" class="fab fa-linkedin" title="LinkedIn"></a>
+            <a href="#" class="fab fa-twitter" title="Twitter"></a>
+            <a href="#" class="fab fa-github" title="GitHub"></a>
+            <a href="#" class="fas fa-envelope" title="Email"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts-new.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "namesTech-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Nischal Pantha - Pilot and Founder of NamesTech",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Use Python Flask to run the app\"",
+    "build": "echo \"No build step required\"",
+    "dev": "echo \"Use Python for development\""
+  },
+  "dependencies": {
+    "animejs": "^3.2.2"
+  },
+  "devDependencies": {},
+  "keywords": ["portfolio", "namesTech", "pilot", "skybound"],
+  "author": "Nischal Pantha",
+  "license": "MIT"
+}
