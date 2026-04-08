@@ -602,7 +602,6 @@ body {
     margin-bottom: 1.5rem;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    animation: slideInDown 0.6s ease-out;
 }
 
 .hero-title {
@@ -610,29 +609,14 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: slideInUp 0.8s ease-out 0.1s both;
 }
 
 .text-line {
     display: inline-block;
-    animation: titleReveal 1s ease-out 0.2s both;
-}
-
-@keyframes titleReveal {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-        clip-path: inset(0 100% 0 0);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        clip-path: inset(0 0 0 0);
-    }
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-subtitle {
@@ -640,7 +624,6 @@ body {
     color: var(--accent-light);
     font-weight: 600;
     margin-bottom: 1rem;
-    animation: slideInUp 0.8s ease-out 0.2s both;
 }
 
 .hero-description {
@@ -648,13 +631,12 @@ body {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.8;
-    animation: slideInUp 0.8s ease-out 0.3s both;
+    max-width: 90%;
 }
 
 .hero-cta {
     display: flex;
     gap: 1.5rem;
-    animation: slideInUp 0.8s ease-out 0.4s both;
 }
 
 .hero-visual {
@@ -780,21 +762,7 @@ section {
     margin: 0 auto;
 }
 
-section.about,
-section.skills,
-section.experience,
-section.projects,
-section.testimonials,
-section.contact {
-    animation: sectionFadeIn 0.8s ease-out forwards;
-    opacity: 0;
-}
 
-@keyframes sectionFadeIn {
-    to {
-        opacity: 1;
-    }
-}
 
 /* ================================================
    ABOUT SECTION
@@ -896,7 +864,7 @@ section.contact {
 }
 
 .skill-bar {
-    width: 100%;;
+    width: 100%;
     height: 8px;
     background: rgba(59, 130, 246, 0.1);
     border-radius: 10px;
@@ -1306,79 +1274,6 @@ section.contact {
     grid-column: 1 / -1;
 }
 
-.form-group {
-    grid-column: auto;
-}
-
-.form-group.full-width {
-    grid-column: 1 / -1;
-}
-
-.form-group label {
-    display: block;
-    color: var(--text-secondary);
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    background: rgba(59, 130, 246, 0.05);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    color: var(--text-primary);
-    padding: 0.875rem 1rem;
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: all var(--transition-standard);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: var(--text-muted);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    background: rgba(59, 130, 246, 0.15);
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-.form-group textarea {
-    grid-column: 1 / -1;
-    resize: vertical;
-    min-height: 150px;
-}
-
-.form-feedback {
-    grid-column: 1 / -1;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
-    display: none;
-    animation: slideInUp 0.3s ease-out;
-}
-
-.form-feedback.show {
-    display: block;
-}
-
-.form-feedback.success {
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: #10b981;
-}
-
-.form-feedback.error {
-    background: rgba(239, 68, 68, 0.15);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    color: #ef4444;
-}
 
 .contact-form button {
     grid-column: 1 / -1;
@@ -1479,7 +1374,7 @@ body.light-mode .glass-morphism {
    RESPONSIVE DESIGN - TABLET (768px and below)
    ================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* Navigation */
     .nav-hamburger {
         display: flex !important;
@@ -1518,8 +1413,8 @@ body.light-mode .glass-morphism {
     }
     
     /* Hero Section */
-    .hero-wrapper {
-        flex-direction: column;
+    .hero-content {
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
     
@@ -2109,7 +2004,7 @@ body.light-mode .about-section-title {
    RESPONSIVE DESIGN - TABLET (768px and below)
    ================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .skills-wrapper,
     .experience-wrapper {
         grid-template-columns: 1fr;
@@ -2199,8 +2094,8 @@ body.light-mode .about-section-title {
         min-height: unset;
     }
     
-    .hero-wrapper {
-        flex-direction: column;
+    .hero-content {
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
     
@@ -2611,7 +2506,7 @@ body.light-mode .prof-tag:hover {
    RESPONSIVE - TECH & PROFESSIONAL STACKS (768px)
    ================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .tech-stack,
     .professional-stack {
         padding: 3rem 1.5rem;
@@ -2891,7 +2786,7 @@ body.light-mode .metric-label {
    RESPONSIVE - HIGHLIGHTS & METRICS (768px)
    ================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .skills-highlights {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -2991,4 +2886,33 @@ body.light-mode .metric-label {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ================================================
+   IMMERSIVE ANIMATION UTILITIES
+   ================================================ */
+
+.reveal-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.reveal-text {
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+}
+
+.horizontal-projects {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    width: max-content;
+    padding-right: 15vw;
+    gap: 3rem;
+}
+
+.magnetic-btn {
+    display: inline-block;
+    will-change: transform;
 }

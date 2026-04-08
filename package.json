@@ -1,5 +1,5 @@
 {
-  "name": "namesTech-portfolio",
+  "name": "nischalpantha-portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio of Nischal Pantha - Pilot and Founder of NamesTech",
   "main": "index.js",
@@ -12,7 +12,12 @@
     "animejs": "^3.2.2"
   },
   "devDependencies": {},
-  "keywords": ["portfolio", "namesTech", "pilot", "skybound"],
+  "keywords": [
+    "portfolio",
+    "namesTech",
+    "pilot",
+    "skybound"
+  ],
   "author": "Nischal Pantha",
   "license": "MIT"
 }
